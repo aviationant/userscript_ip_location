@@ -235,9 +235,8 @@ function generateRandomId() {
 function getTime() {
     const timeRegex = /^(.+)\s\(.+$/
     let dateTime = new Date();
-    let time = dateTime.toTimeString();
-    let timeString = timeRegex.exec(time)[1]
-    return timeString;
+    let time = timeRegex.exec(dateTime.toTimeString())[1];
+    return time;
 }
 
 function loadingDialog(element, time) {
